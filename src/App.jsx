@@ -1,35 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
+import EmployeeList from './components/EmployeeList'
+import Header from './components/Header'
+import SearchBar from './components/SearchBar'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    < div className="mainPage" >
+      <div className="header">
+      <Header/>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <SearchBar/>
+    <EmployeeList/>
+    <EmployeeList/>
+    <EmployeeList/>
+    <EmployeeList/>
+    </div>
   )
 }
 
 export default App
+
+
+// You should create an App, Homepage, Header, SearchBar, EmployeeList and EmployeeListItem.
+// Style your components to accurately match the given layout. You do not need to include images, but can if you have time.
+// No functionality is needed, just arrange the layout with with React components.
